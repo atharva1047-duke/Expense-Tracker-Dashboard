@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <h1>Expense Tracker</h1>
+        <button id="darkModeToggle" class="toggle-btn">🌙</button>
+    </header>
+
+    <section class="dashboard">
+        <div class="card">
+            <h3>Total Balance</h3>
+            <h2 id="balance">₹0.00</h2>
+        </div>
+        <div class="card income">
+            <h3>Total Income</h3>
+            <h2 id="income">₹0.00</h2>
+        </div>
+        <div class="card expense">
+            <h3>Total Expense</h3>
+            <h2 id="expense">₹0.00</h2>
+        </div>
+    </section>
+
+    <section class="card form-section">
+        <h3>Add Transaction</h3>
+        <form id="transactionForm">
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Other</option>
+            </select>
+            <select id="type" required>
+                <option value="">Type</option>
+                <option>Income</option>
+                <option>Expense</option>
+            </select>
+            <button type="submit" class="primary-btn">Add Transaction</button>
+        </form>
+    </section>
+
+    <section class="card">
+        <div class="filter-header">
+            <h3>Transactions</h3>
+            <select id="filterCategory">
+                <option value="All">All Categories</option>
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <ul id="transactionList"></ul>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
